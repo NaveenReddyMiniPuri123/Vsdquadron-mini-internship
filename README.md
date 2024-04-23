@@ -1,6 +1,6 @@
 TASK 1
 
-1.Download Oracle Virtual machine and allocated 8GB RAM,100GB HDD
+1.Download Oracle Virtual machine and allocated 4GB RAM,100GB HDD
 
 2.Installation of Ubuntu 22.04 using Virtual Machine
 
