@@ -50,6 +50,8 @@ here instructions are ADD,SUB,XOR,OR,SLA(shift left logic),SRL(shift right logic
 
 constant of 10bits will be replacing function and source register and that is immediate register(12bits)
 
+it has one sourse register Rs1 and one destination register Rd (each of 5bit)
+
 ![i type 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/abe90461-12cf-454e-8a9e-bab16391073e)
 
 The operations are performed between sourse register (Rs1) and constant value in immediate register so we need to make constant as 32 bit to make it compatable to Rs1 and sign bit is always bit 31,all immediates are sign extended always available at the left
@@ -65,14 +67,23 @@ This instruction is used for conditional statements(>,>=,<,<=,==,!=,....)
 
 ![b type 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/f4a31058-a158-4a49-af64-634e7df8c0b1)
 
+it has two sourse registers Rs1 and Rs2
 
 It checks the condition between Rs1 and Rs2
 
 a.if condition is "true":
 
-pc=pc+immediate value(incrementing the pc)
+pc=pc+immediate value(incrementing the pc) and jump to next address based on offset value
 
 b.if condition is "false":
 
 pc=pc+4(which execute next input)
+
+![btype2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/507a009d-6c03-4790-b2ae-1d332de25b1b)
+
+branch instruction are: BEQ(equal to),BNE(not eqial to),BLT(lessthan),BGE(greaterthan),BLTU(lessthan unsigned,BGEU(greaterthan unsigned)
+
+to calculate offset address we need to compose immediate value:IMMD={SXT(IMM[12:1],1'B0}
+meaning of above expression is "immediate value is sign extension of immediate value[12:1] and 1st bit at LSB is 0"
+
 
