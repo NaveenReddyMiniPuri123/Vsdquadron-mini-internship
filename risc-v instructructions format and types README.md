@@ -171,5 +171,130 @@ R1 sub R2=r7=01010
 
 32bit code is:0100000 00110 10000 000 0110011
 
+**3.and r8,r1,r3**
+r8---- destination
+
+r1 and r3 sources
+
+let :r1=00110,R2=10110
+
+R1 and R2 = Rd=00110
+
+32 bit code: 0000000 10110 111 00110 0110011
+
+**4.or r9,r2,r5**
+
+R9 ----- destination
+
+r2-------source1
+
+r5-------source2
+
+let:R1=00000,R2=11111
+
+R1 or R2=Rd=11111
+
+32bit code:0000000 11111 00000 110 11111 0110011
+
+**5.SLT r11,r2,r4 (set lessthan)**
+
+r11------destination
+
+r2-------source1
+
+r4-------source2
+
+let: r2=00010,r4=10000
+
+r2<r4==True,set r11 to 1
+
+r11=00001
+
+32bit code:0000000 00010 010 00001 0110011
+
+**6.addi r12,r4,5**
+r4--- source
+
+5----immediate
+
+let r4=01000
+
+r4+5=01101
+
+32bit code= 000000000101 01000 000 01101 0010011
+
+**7.SW r3,r1,2(store word)**
+
+r3 having data "16"-10000
+
+r1 having address "12" -01100
+
+immediate value=IMMD=2-00010
+
+store address=rs1+immd
+ 
+store addre=14
+ 
+data "16" from r3 is stored at location "14"
+
+**8.LW r13,r1,2(load word)**
+ 
+let: r1 having address=12-01100
+
+immd=2-00010
+
+immd+r1=14
+
+load the value to r13 from location 14
+
+**9.beq r0,r0,15**
+
+The content in r0 will be always equal to itself
+
+ro==ro
+
+pc=pc+15;program counter will execute instruction after 15 instructions from current instruction
+
+**10.bne r0,r1,20**
+
+if ro!=r1-- if it is true
+
+pc=pc+20----execute 20th instruction from current instruction
+
+if r0!=r1---if it is false
+
+pc=pc+4 executes next instruction
+
+**11.SLL r15,r1,r2(2)**
+
+r2(2) is the  left-shift amount to be performed on r1
+
+let: r1= 00110
+
+1shift =01100
+
+2shift=11000=24
+
+24 is stored into r15
+
+**12.SRL r16,r14,r2(2)**
+
+ r2(2) is the right-shift amount to be performed on r1
+
+ let:r14=6--00110
+
+ 1shift=00011
+
+ 2shift=00001=1
+ 1 is stored into r16
+ 
+
+
+
+
+
+
+
+
 
  
