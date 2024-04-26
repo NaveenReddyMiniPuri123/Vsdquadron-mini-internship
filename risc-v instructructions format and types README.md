@@ -141,3 +141,35 @@ JALR:Rd=pc+4,pc={Rs1+immi),1'b0}  here Rs1 is the reason for long jump
 
 ![jump 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/730eddf4-ca29-4346-a7e0-ee24f027fa49)
 
+**IDENTIFYING INSTRUCTIONS AND THEIR OPERATIONS(APPLICATION)**:
+
+![example insructions](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/048fa935-ce74-4284-985c-1ff45ea536d8)
+
+lets solve above instructions with examples.......
+
+**1.add r6,r2,r1**
+
+it is R-type,R2 and r1 are source registers,r6 is destination register
+
+let:   R1=00100,R2=01001
+
+R1+R2=rd=01101
+
+0000000 01001 00100 000 01101 0110011 (funct7   rs2   rs1 fun3   rd  opcode ) 32 bit instruction each followed by format
+
+**2.sub r7,r1,r2**
+
+R7----- destination
+
+r1----- source1
+
+r2------source2
+
+let:   r1=10000, r2=00110
+
+R1 sub R2=r7=01010
+
+32bit code is:0100000 00110 10000 000 0110011
+
+
+ 
