@@ -81,9 +81,63 @@ pc=pc+4(which execute next input)
 
 ![btype2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/507a009d-6c03-4790-b2ae-1d332de25b1b)
 
-branch instruction are: BEQ(equal to),BNE(not eqial to),BLT(lessthan),BGE(greaterthan),BLTU(lessthan unsigned,BGEU(greaterthan unsigned)
+Branch instruction are: BEQ(equal to),BNE(not eqial to),BLT(lessthan),BGE(greaterthan),BLTU(lessthan unsigned,BGEU(greaterthan unsigned)
 
-to calculate offset address we need to compose immediate value:IMMD={SXT(IMM[12:1],1'B0}
+To calculate offset address we need to compose immediate value:IMMD={SXT(IMM[12:1],1'B0}
 meaning of above expression is "immediate value is sign extension of immediate value[12:1] and 1st bit at LSB is 0"
 
+**4.S-type(store type)**
+
+1.opcode for "load" is 0000011
+
+2.opcode for "store" is 0100011
+
+![load store 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/96aa2770-08fa-41e6-af0d-9bb72e2d5146)
+
+**store**
+
+we use STORE instruction to write values into register
+
+address is calculated from Rs1 and immediate value and the value at that location is stored with Rs2 value
+
+address=Rs1+sxt(imm[11:0])
+Function defines type of operation:(store hallf word,store full word)
+
+**load**
+
+used to read memory,reads data at particular location and store in Rd(destination) 
+
+let base=0
+address=0+offset[11:0]
+
+![load store 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/3fc853ba-0c66-40e4-839e-38a60ed78c10)
+
+![load store 3](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/196c0e7e-d116-4c55-925a-5bdd77c65c9b)
+
+The instructions are :LB(LOAD BYTE),LH(LOAD HALFWORD),LW(LOAD WORD).,.......
+
+
+**5.J-type(jump type)**
+
+1.JAL(JUMP AND LINK)
+
+IMMD={sxt(imm[20:1]),1'b0
+
+pc=pc+IMMD(jump addres)
+
+Rd=pc+4(next instruction address)
+
+![jump 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/b0dd1861-870b-4e8a-bc44-e0ae5462f5a7)
+
+This instruction is used to jump to particular location and address is defined by immediate value and stores next instruction addres in link register
+
+2.JALR(JUMP AND LINK REGISTER)
+it is a immediate type ,it is used for long jump
+
+Target address is stored in a register and next instruction address aslo storing address instruction following the JALR instruction into destination register 
+
+JALR:Rd=pc+4,pc={Rs1+immi),1'b0}  here Rs1 is the reason for long jump
+
+
+![jump 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/730eddf4-ca29-4346-a7e0-ee24f027fa49)
 
