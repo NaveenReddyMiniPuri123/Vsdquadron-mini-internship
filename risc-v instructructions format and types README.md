@@ -22,7 +22,7 @@ above figure is explaining how each instruction occupying 32 bits and what makes
 
 lets get into details of each type of instruction............
 
-**R-type**
+**1.R-type(register type)**
 
 it has :
 
@@ -46,7 +46,7 @@ in above table ADD and SUB has same function3 value that is "000" but 30th bit v
 
 here instructions are ADD,SUB,XOR,OR,SLA(shift left logic),SRL(shift right logic),SRA(shift right arithematic),slt(set lessthan),sltu(set lessthan unsigned)
 
-**I-type**:
+**2.I-type(immediate type)**:
 
 constant of 10bits will be replacing function and source register and that is immediate register(12bits)
 
@@ -58,3 +58,21 @@ Rd=Rs1+(operation)+immediate value
 
 ![i type 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/9c6e6549-51ba-49a7-8f23-eb958c49556a)
 The instructions of I-type are ADDI,SLTI,SLTIU,XORI,ORI,ANDI for shift operations the shift value is stored in "shamt[4:0]" whis is of 5bit of immediate value 
+
+**3.B-type(branch type)**:
+
+This instruction is used for conditional statements(>,>=,<,<=,==,!=,....)
+
+![b type 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/f4a31058-a158-4a49-af64-634e7df8c0b1)
+
+
+It checks the condition between Rs1 and Rs2
+
+a.if condition is "true":
+
+pc=pc+immediate value(incrementing the pc)
+
+b.if condition is "false":
+
+pc=pc+4(which execute next input)
+
