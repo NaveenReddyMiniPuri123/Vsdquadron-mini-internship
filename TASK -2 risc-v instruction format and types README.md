@@ -16,7 +16,8 @@ they are classified as:
 
 6.J-type(jump type)
 
-![risc v informat](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/44a340a2-a0c8-4d8f-8ba1-fc7d5f99ac9d)
+
+![instruction format](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/45e9906d-8357-485b-8b13-8e3884653f1c)
 
 above figure is explaining how each instruction occupying 32 bits and what makes the difference between each type
 
@@ -34,15 +35,12 @@ c.two functions-function3 (3-bits),function7(7bits)
 
 d.opcode is 7 bits(0110011) it defines R-type
 
-![r-type1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/54400be0-aef4-43e1-af4d-73e03a603050)
-
+![r-type1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/cdb8d060-f86c-4ac0-b783-649bf185cd3b)
 
 what is the operation here?......
 
 based on function3 and function7 the operation is defined 
 in above table ADD and SUB has same function3 value that is "000" but 30th bit value in function7 made difference in the same way every instruction has different function values which define them as shown in above table
-
-![r type 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/0d40a01c-3b5f-4dfd-bbe8-145bc4993e10)
 
 here instructions are ADD,SUB,XOR,OR,SLA(shift left logic),SRL(shift right logic),SRA(shift right arithematic),slt(set lessthan),sltu(set lessthan unsigned)
 
@@ -52,22 +50,23 @@ constant of 10bits will be replacing function and source register and that is im
 
 it has one sourse register Rs1 and one destination register Rd (each of 5bit)
 
-![i type 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/abe90461-12cf-454e-8a9e-bab16391073e)
+![immediate1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/bec62784-4c00-40c4-bcab-0f2cece41a82)
 
 The operations are performed between sourse register (Rs1) and constant value in immediate register so we need to make constant as 32 bit to make it compatable to Rs1 and sign bit is always bit 31,all immediates are sign extended always available at the left
 
 Rd=Rs1+(operation)+immediate value
 
-![i type 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/9c6e6549-51ba-49a7-8f23-eb958c49556a)
+![immediate2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/8ea3006c-1f0f-48c3-9499-f601f6a9fb02)
+
 The instructions of I-type are ADDI,SLTI,SLTIU,XORI,ORI,ANDI for shift operations the shift value is stored in "shamt[4:0]" whis is of 5bit of immediate value 
 
 **3.B-type(branch type)**:
 
 This instruction is used for conditional statements(>,>=,<,<=,==,!=,....)
 
-![b type 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/f4a31058-a158-4a49-af64-634e7df8c0b1)
-
 it has two sourse registers Rs1 and Rs2
+
+![branch1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/7d7eb444-c31a-47dc-9872-19f95f27b819)
 
 It checks the condition between Rs1 and Rs2
 
@@ -78,8 +77,6 @@ pc=pc+immediate value(incrementing the pc) and jump to next address based on off
 b.if condition is "false":
 
 pc=pc+4(which execute next input)
-
-![btype2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/507a009d-6c03-4790-b2ae-1d332de25b1b)
 
 Branch instruction are: BEQ(equal to),BNE(not eqial to),BLT(lessthan),BGE(greaterthan),BLTU(lessthan unsigned,BGEU(greaterthan unsigned)
 
@@ -92,7 +89,7 @@ meaning of above expression is "immediate value is sign extension of immediate v
 
 2.opcode for "store" is 0100011
 
-![load store 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/96aa2770-08fa-41e6-af0d-9bb72e2d5146)
+![store1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/f00c9630-ad37-4617-ba5c-fe027e45953a)
 
 **store**
 
@@ -110,9 +107,7 @@ used to read memory,reads data at particular location and store in Rd(destinatio
 let base=0
 address=0+offset[11:0]
 
-![load store 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/3fc853ba-0c66-40e4-839e-38a60ed78c10)
-
-![load store 3](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/196c0e7e-d116-4c55-925a-5bdd77c65c9b)
+![store2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/7d81e5e6-85ac-4c15-af66-0628b7a6fb7a)
 
 The instructions are :LB(LOAD BYTE),LH(LOAD HALFWORD),LW(LOAD WORD).,.......
 
@@ -127,7 +122,7 @@ pc=pc+IMMD(jump addres)
 
 Rd=pc+4(next instruction address)
 
-![jump 1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/b0dd1861-870b-4e8a-bc44-e0ae5462f5a7)
+![jump1](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/07941c88-4cdc-42f3-bf63-5c0ebab8e9a2)
 
 This instruction is used to jump to particular location and address is defined by immediate value and stores next instruction addres in link register
 
@@ -136,14 +131,14 @@ it is a immediate type ,it is used for long jump
 
 Target address is stored in a register and next instruction address aslo storing address instruction following the JALR instruction into destination register 
 
+![jump2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/bc9181d9-43d9-4054-8b9f-9fbb65773952)
+
 JALR:Rd=pc+4,pc={Rs1+immi),1'b0}  here Rs1 is the reason for long jump
 
 
-![jump 2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/730eddf4-ca29-4346-a7e0-ee24f027fa49)
-
 **IDENTIFYING INSTRUCTIONS AND THEIR OPERATIONS(APPLICATION)**:
 
-![example insructions](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/048fa935-ce74-4284-985c-1ff45ea536d8)
+![list of instructions](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/b467d84e-abc4-498e-a09a-8a19b06fbaea)
 
 lets solve above instructions with examples.......
 
@@ -237,6 +232,8 @@ store addre=14
  
 data "16" from r3 is stored at location "14"
 
+32 bit:0000000 00010 01100 010 00010 0100011
+
 **8.LW r13,r1,2(load word)**
  
 let: r1 having address=12-01100
@@ -247,11 +244,15 @@ immd+r1=14
 
 load the value to r13 from location 14
 
+32bit:000000000010 01100 010 01110
+
 **9.beq r0,r0,15**
 
 The content in r0 will be always equal to itself
 
 ro==ro
+
+32bit: 0 000000 00000 00000 000 11110 1100011
 
 pc=pc+15;program counter will execute instruction after 15 instructions from current instruction
 
