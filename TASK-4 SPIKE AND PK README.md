@@ -76,9 +76,13 @@ $ spike pk sum1ton.o
 
 $ spike -d pk sum1ton.o
 
+
+
 **dumping the instructions**
 
 $ riscv64-unknown-elf-objdump -d sum1ton.o | less
+
+![1nnnnn](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/99cd4648-9e18-49c2-8775-2f5d2cd3eb54)
 
 
 
