@@ -12,7 +12,7 @@ $ ./a.out
 
 This commands provide output of sum of numbers from 1 to n using gcc compiler
 
-**2.compiling and debugging c code using riscv compiler**
+**2.compiling and debugging c code using riscv compiler (Ofast)**
 
 $ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 
@@ -63,6 +63,24 @@ The addi sp,sp,-16 instruction in the compressed instruction set (rv64c) perform
 The value of (16) in decimal is equivalent to (10) in hexadecimal. The stack pointer (sp) value before the execution of addi sp,sp, -16 was 0x3ffffffb50, and subtracting 0x10 from it yields "0x3ffffffb40".
 
 ![3n](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/f0c4a0b6-ca2a-4098-97be-d66fea8fc15b)
+
+
+
+
+
+**compiling and debugging c code using riscv compiler (O1)**
+
+$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+
+$ spike pk sum1ton.o
+
+$ spike -d pk sum1ton.o
+
+**dumping the instructions**
+
+$ riscv64-unknown-elf-objdump -d sum1ton.o | less
+
+
 
 
   
