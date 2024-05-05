@@ -68,7 +68,10 @@ The value of (16) in decimal is equivalent to (10) in hexadecimal. The stack poi
 
 
 
-**compiling and debugging c code using riscv compiler (O1)**
+
+
+
+**COMPILING AND DEBUGGING C CODE WITH RISCV(O1)**
 
 $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 
