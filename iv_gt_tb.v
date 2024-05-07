@@ -2,8 +2,8 @@ module iv_gt_tb;
 
 reg clk,RN;
 wire [31:0]WB_OUT,NPC;
-
-  iv_gt(gt(clk,RN,NPC,WB_OUT);
+  
+  iv_gt (clk,RN,NPC,WB_OUT);
 
 
 always #3 clk=!clk;
