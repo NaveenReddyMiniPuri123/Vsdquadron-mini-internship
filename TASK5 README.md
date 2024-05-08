@@ -43,6 +43,9 @@ $ gtkwave iv_gt.vcd
 
 
 
+![last2](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/cef1461c-d10e-47f4-a29d-dbc82d6097d0)
+
+
 ![lstr ivtb](https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/5a8d00bc-b915-416e-9973-5379822ae4c3)
 
 
