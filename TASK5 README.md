@@ -97,7 +97,12 @@ A=1,B=2,R16 is stored with 003
 
  r0==ro  so it jumps to location of 15 addresses from present location so so r0=0000 then it jumps to 00f
 
- 
+ **9.LW R13,R1,2**
+
+ <img width="335" alt="LW R13,R1,2" src="https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/6dc44bad-2077-4408-a64b-32898570e50b">
+
+ R1=01,R2=02 and R13 is loaded with content at memory address 03
 
  
 
+ 
