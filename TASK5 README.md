@@ -71,8 +71,33 @@ A=1,B=2,R16 is stored with 003
 
  **4.or r10,r1,r4**
 
+ <img width="336" alt="orbinary" src="https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/3c08a311-ba83-4b76-8386-7ca2fee268b5">
  
+ r1=0001,r4=0100 and r10 is stored with 0101
 
+ **5.xor r10,r1,r4**
+
+ <img width="335" alt="xor r1 and r10" src="https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/597a0537-0f22-4ae2-a205-58c69202080d">
+
+ r1=0010,r2=0100 and r10 is stored with 0110
+
+ **6.slt r11,r2,r4**
+
+ r4=5,r2=2 is shifted 5 times and result is stored in r11 as 00001
+
+ **7.addi r12,r4,5**
+
+ <img width="330" alt="addi r11,4,5" src="https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/09f5cd65-1953-4f30-b2a4-844994071cd9">
+
+ r4=4 and it is added with immediate value 5 and get stored in r12 that is  00009
+
+ **8.BEQ r0,r0,15**
+
+ <img width="332" alt="beq ro,ro,15" src="https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/dc6f5462-7ca7-4f59-9e40-62132556f42f">
+
+ r0==ro  so it jumps to location of 15 addresses from present location so so r0=0000 then it jumps to 00f
+
+ 
 
  
 
