@@ -103,6 +103,12 @@ A=1,B=2,R16 is stored with 003
 
  R1=01,R2=02 and R13 is loaded with content at memory address 03
 
+ **10.SW R3,R1,2**
  
+<img width="336" alt="SW INS" src="https://github.com/NaveenReddyMiniPuri123/Vsdquadron-mini-internship/assets/167668786/9eab462e-20eb-4ba4-9079-225348d89580">
+
+RD=03 after R1=01 and immediate value is 02 then "ID EX IMMEDIATE" is stored with 02 which is content from R3=03
+
+
 
  
